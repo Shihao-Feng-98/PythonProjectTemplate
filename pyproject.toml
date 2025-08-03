@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "pypjt"
+version = "0.0.0"
+description = "A python project template"
+authors = [
+    { name = "Shihao Feng", email = "13247344844@163.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "colorlog==6.9.0",
+    "numpy==1.26.4",
+    "scipy==1.15.3"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest", 
+    "black",
+    "build"
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
